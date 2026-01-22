@@ -3,6 +3,7 @@ const http = require("http");
 const server = http.createServer((req, res) => {
   console.log("URL ---> ", req.url);
   console.log("Method ---> ", req.method);
+  console.log(req);
 
   res.end("You have successfully build your first server");
 });
