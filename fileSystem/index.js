@@ -1,4 +1,4 @@
-// // const fs = require("fs");
+const fs = require("fs");
 // // const path = require("path");
 
 // // // --------------------- Read sync, It block the thread, don't use in real project --------------
@@ -114,18 +114,18 @@
 
 // // pr.then((res) => console.log(pr));
 
-async function getData() {
-  try {
-    // Promise.reject();
-    await 10;
-    // Promise.resolve("----");
-    console.log("Good");
-  } catch (error) {
-    console.log("Error:--", error);
-  }
-}
-getData();
-console.log("end");
+// async function getData() {
+//   try {
+//     // Promise.reject();
+//     await 10;
+//     // Promise.resolve("----");
+//     console.log("Good");
+//   } catch (error) {
+//     console.log("Error:--", error);
+//   }
+// }
+// getData();
+// console.log("end");
 
 // x.then((res) => {}).catch((err) => {});
 // const x = Promise.reject();
@@ -140,3 +140,13 @@ console.log("end");
 //   console.log(error, "<----");
 // }
 // console.log("End");
+
+
+// ----------------------------------- Buffer -------------
+// fs.readFile('./data.txt',(err,data)=>{
+//   if (err) return console.log(err)
+//     console.log(data)
+// })
+
+const str = Buffer.from("Ajmat")
+console.log(str)
