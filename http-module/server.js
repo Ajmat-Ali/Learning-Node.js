@@ -24,13 +24,15 @@ const http = require("http");
 
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
+  console.log(url);
+
   console.log(url.pathname);
-  console.log(url.searchParams.get("category"));
-  console.log(url.searchParams.get("price"));
+  // console.log(url.searchParams.get("category"));
+  // console.log(url.searchParams.get("price"));
+  // console.log(req.url);
 
   res.end("You have successfully build your first server");
 });
-console.log("Hi......");
 
 server.listen(3000, () => {
   console.log("server running on  http://localhost:3000");
